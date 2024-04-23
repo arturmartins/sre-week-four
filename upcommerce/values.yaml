@@ -1,8 +1,10 @@
 replicaCount: 1
 imagePullPolicy: Always
-cpuLimit: "1"
-memoryLimit: "4Gi"
+cpuLimit: "250m"
+memoryLimit: "150Mi"
 upcommerce:
-  image: uonyeka/upcommerce:v3
-
-
+  # https://hub.docker.com/layers/uonyeka/upcommerce/v3/images/sha256-bab2a3efd07028708c42ff15d8edd8343a64f5e6297e734004db48f7b07247d7?context=explore
+  image: uonyeka/upcommerce:v3 
+canary:
+  # https://hub.docker.com/layers/uonyeka/canary/linux-amd64/images/sha256-fcbd574547b11c4dee74e75827f7bccd43e13ace31330353d6bff2096de17859?context=explore
+  image: uonyeka/canary:linux-amd64 
